@@ -124,11 +124,14 @@ let Axis = React.createClass({
 
         let pathElement = <path className="domain" d={d} fill="none" stroke="#aaa"/>;
 
+        let axisBackground = <rect className="axis-background" fill="none"/>;
+
         return (
                 <g ref="axis" className={className} transform={this._getTranslateString()} style={{shapeRendering: 'crispEdges'}}>
+                {axisBackground}
                 {tickElements}
-            {pathElement}
-            {labelElement}
+                {pathElement}
+                {labelElement}
             </g>
         );
     },
