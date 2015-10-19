@@ -35,6 +35,7 @@
 		"webpack": "^1.7.3"
 	},
 	"scripts": {
+    	"postinstall": "babel -c -d ./lib ./src/",
 		"prepublish": "babel -c -d ./lib ./src/",
 		"postpublish": "rm -r ./lib",
 		"build:js": "webpack && webpack --config webpack.config.min.js"
